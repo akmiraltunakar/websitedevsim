@@ -1,100 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Developer Sim: Idle Clicker | Official Game</title>
-    
-    <meta name="description" content="Start as a broke intern and rise to billionaire Tech CEO! Download Developer Sim: Idle Clicker on iOS.">
-    <meta property="og:title" content="Developer Sim: Idle Clicker">
-    <meta property="og:description" content="Build your software startup empire from scratch! Available now on iOS.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://akmiraltunakar.github.io/websitedevsim/">
-    <meta property="og:image" content="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b9/8d/f5/b98df52b-edef-268e-b29d-d0a6d52f23f2/Placeholder.mill/1200x630wa.jpg">
-    <meta name="theme-color" content="#0d0f1d">
-
-    <!-- Lightning-Fast Smart Redirect (0.15s) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazılımcı Simülatörü - İndir</title>
     <script>
-        setTimeout(function() {
-            window.location.replace("https://apps.apple.com/app/id6794744024");
-        }, 150);
+        (function() {
+            var ua = navigator.userAgent || navigator.vendor || window.opera;
+            
+            // iOS (iPhone / iPad / iPod) Tespiti
+            if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+                window.location.replace("https://apps.apple.com/app/id6794744024");
+            } 
+            // Android Tespiti
+            else if (/android/i.test(ua)) {
+                window.location.replace("https://play.google.com/store/apps/details?id=com.akmir.devsim");
+            }
+        })();
     </script>
-
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background-color: #0d0f1d;
-            color: #f8fafc;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            min-height: 100vh;
+            background: #0b0e17;
+            color: #ffffff;
             display: flex;
-            align-items: center;
             justify-content: center;
-            padding: 24px 16px;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
             text-align: center;
+            padding: 20px;
         }
         .container {
-            max-width: 460px;
-            width: 100%;
-            background: rgba(19, 24, 44, 0.95);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 28px;
-            padding: 36px 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            max-width: 400px;
+            background: #141a29;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            border: 1px solid #1f293d;
         }
-        .app-icon {
-            width: 96px;
-            height: 96px;
-            border-radius: 22px;
-            background: #1e293b;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
-        }
-        .badge-rating {
-            background: rgba(234, 179, 8, 0.15);
-            border: 1px solid rgba(234, 179, 8, 0.4);
-            color: #facc15;
-            padding: 6px 14px;
-            border-radius: 9999px;
-            font-size: 13px;
-            font-weight: 700;
-        }
-        h1 { font-size: 26px; font-weight: 900; }
-        .subtitle { font-size: 15px; color: #94a3b8; }
-        .cta-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            width: 100%;
-            background: linear-gradient(135deg, #0284c7, #2563eb);
-            color: #ffffff;
+        h1 { font-size: 22px; margin-bottom: 8px; color: #00f2fe; }
+        p { color: #8b9bb4; font-size: 14px; margin-bottom: 24px; }
+        .btn {
+            display: block;
+            margin: 12px 0;
+            padding: 14px;
+            color: white;
             text-decoration: none;
-            padding: 18px 24px;
-            border-radius: 18px;
-            font-size: 18px;
-            font-weight: 800;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 15px;
+            transition: transform 0.2s;
         }
+        .btn-ios { background: #1c1c1e; border: 1px solid #3a3a3c; }
+        .btn-android { background: #01875f; }
+        .btn:hover { transform: scale(1.03); }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="app-icon">💻</div>
-        <div class="badge-rating">★ 4.9 RATING • FREE ON iOS</div>
-        <div>
-            <h1>Developer Sim: Idle Clicker</h1>
-            <p class="subtitle">From an unpaid intern to a billionaire Tech CEO! 🚀</p>
-        </div>
-        <a href="https://apps.apple.com/app/id6794744024" class="cta-btn" id="downloadBtn">
-            Download on App Store
-        </a>
+        <h1>Yazılımcı Simülatörü</h1>
+        <p>Cihazınız için uygun mağazayı seçin:</p>
+        <a class="btn btn-ios" href="https://apps.apple.com/app/id6794744024">🍏 App Store'dan İndir</a>
+        <a class="btn btn-android" href="https://play.google.com/store/apps/details?id=com.akmir.devsim">🤖 Google Play'den İndir</a>
     </div>
 </body>
 </html>
