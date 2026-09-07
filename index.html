@@ -8,11 +8,11 @@
         (function() {
             var ua = navigator.userAgent || navigator.vendor || window.opera;
             
-            // iOS (iPhone / iPad / iPod) Tespiti
+            // iOS (iPhone / iPad / iPod) Tespiti -> Doğrudan App Store'a
             if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
                 window.location.replace("https://apps.apple.com/app/id6794744024");
             } 
-            // Android Tespiti
+            // Android Tespiti -> Doğrudan Google Play'e
             else if (/android/i.test(ua)) {
                 window.location.replace("https://play.google.com/store/apps/details?id=com.akmir.devsim");
             }
